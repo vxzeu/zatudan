@@ -2,10 +2,192 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://discord.gg/ctkp-1130069314742005861">
-  <title>Redirecting...</title>
+
+  <meta property="og:title" content="新時代の雑談サーバー">
+  <meta property="og:description" content="ここは最強">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1515370671419428947/1549980911553093652/3.jpg?ex=6aacabb6&is=6aab5a36&hm=adf160dfa921fbd1e02afe997c78de3d8555461b56b2c56e88631bddf4126312&">
+  <meta property="og:type" content="website">
+
+  <title>広告</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      padding-top: 60px;
+    }
+
+    #count {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .ad {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      width: 320px;
+      min-height: 150px;
+
+      transform: translateX(-50%) translateY(80px) scale(0);
+      opacity: 0;
+
+      background: white;
+      color: #111;
+      border-radius: 28px;
+      padding: 22px;
+
+      box-shadow: 0 10px 35px rgba(0,0,0,.45);
+
+      animation: pop .7s cubic-bezier(.17,.89,.32,1.3) .3s forwards;
+    }
+
+    .ad-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .ad-price {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .ad-text {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .discord-id {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .bubble {
+      position: fixed;
+      bottom: -30px;
+      width: 14px;
+      height: 14px;
+      background: rgba(255,255,255,.75);
+      border-radius: 50%;
+      animation: bubbleUp 2.5s ease-out forwards;
+    }
+
+    .bubble:nth-of-type(1) {
+      left: 20%;
+    }
+
+    .bubble:nth-of-type(2) {
+      left: 35%;
+      width: 9px;
+      height: 9px;
+      animation-delay: .5s;
+    }
+
+    .bubble:nth-of-type(3) {
+      left: 65%;
+      width: 18px;
+      height: 18px;
+      animation-delay: .3s;
+    }
+
+    .bubble:nth-of-type(4) {
+      left: 80%;
+      width: 8px;
+      height: 8px;
+      animation-delay: .8s;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: translateX(-50%) translateY(80px) scale(0);
+        opacity: 0;
+      }
+
+      70% {
+        transform: translateX(-50%) translateY(-10px) scale(1.08);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bubbleUp {
+      0% {
+        transform: translateY(0) scale(.5);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-280px) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <p>リダイレクト中...</p>
+
+  <div class="container">
+    <h1>リンクを開いています</h1>
+    <p><span id="count">3</span>秒後にリダイレクトします(՞>‎⩊<՞)</p>
+  </div>
+
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <div class="ad">
+    <div class="ad-title">広告募集中！</div>
+
+    <div class="ad-price">
+      月額560円！
+    </div>
+
+    <div class="ad-text">
+      Discordサーバーから各SNSまで<br>
+      対応してます。
+    </div>
+
+    <div class="discord-id">
+      相談はDiscordで<br>
+      discord@koyota1x
+    </div>
+  </div>
+
+  <script>
+    const targetURL = "https://discord.gg/ctkp-1130069314742005861";
+
+    let count = 3;
+
+    const timer = setInterval(() => {
+      count--;
+
+      document.getElementById("count").textContent = count;
+
+      if (count <= 0) {
+        clearInterval(timer);
+        window.location.href = targetURL;
+      }
+    }, 1000);
+  </script>
+
 </body>
 </html>
